@@ -16,6 +16,7 @@ Author: minnyatto@gmail.com
 		I put received data in each item of myRing and process it one by one
 		when one data was processed, I reuse the item which stored the data
 		by using this mechanism, the ringbuffer item index will be running cyclically
+		and can save memory
 
 ****how to use:
 	
