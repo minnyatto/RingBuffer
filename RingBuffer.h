@@ -41,6 +41,7 @@ typedef struct
 } RingBuff_t;
 
 RingBuff_Return_e RingBuffer_Create(RingBuff_t *ring, void *ringdata, uint16_t itemSize, uint16_t ringSize);
+RingBuff_Return_e RingBuffer_Reset(RingBuff_t *ring);
 RingBuff_Return_e RingBuffer_Get(RingBuff_t *ring, void *res);
 RingBuff_Return_e RingBuffer_Set(RingBuff_t *ring, const void *data);
 RingBuff_Return_e RingBuffer_SetReadBack(RingBuff_t *ring, uint8_t NumOfIdx);

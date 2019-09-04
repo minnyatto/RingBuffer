@@ -14,14 +14,14 @@
 				
 				
 				RingBuff_t 		myRingBuffer;
-				myRingData_t		myRingData[32];
+				myRingData_t	myRingData[32];
 				
 		2. Create RingBuffer
 		
 				RingBuffer_Create(&myRingBuffer, 
-						&myRingData[0], 
-						sizeof(myRingData[0]), 
-						sizeof(myRingData)/sizeof(myRingData[0]));
+								&myRingData[0], 
+								sizeof(myRingData[0]), 
+								sizeof(myRingData)/sizeof(myRingData[0]));
 				
 		3. Use
 			
@@ -61,8 +61,8 @@ RingBuff_Return_e RingBuffer_Reset(RingBuff_t *ring)
 		return RINGBUFFER_NG;
 	}
 	
-	ring->ItemSize = 0;
-	ring->RingSize = 0;
+	ring->ReadIdx = 0;
+	ring->WriteIdx = 0;
 	ring->State	   = RINGBUFFER_STATE_NORMAL;
 
 	return RINGBUFFER_OK;
