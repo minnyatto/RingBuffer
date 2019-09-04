@@ -4,7 +4,7 @@ this is a RingBuffer Module for embedded system
 Author: minnyatto@gmail.com
 
 ****why should we use ringbuffer: 
-	lets see whyuse.JPG file 
+	![](https://photos.app.goo.gl/KxujnnZg92xs3cNc9)
 	
 	In Embedded System, we have some kinds of communication as SPI, I2C, USB, USART,...
 	when data receive from these communications, receiving speed is higher than data processing speed
