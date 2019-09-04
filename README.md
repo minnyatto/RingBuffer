@@ -5,6 +5,7 @@ Author: minnyatto@gmail.com
 
 ****why should we use ringbuffer: 
 	lets see whyuse.JPG file 
+	
 	In Embedded System, we have some kinds of communication as SPI, I2C, USB, USART,...
 	when data receive from these communications, receiving speed is higher than data processing speed
 	so we need to keep or store received data to some where and process it later
