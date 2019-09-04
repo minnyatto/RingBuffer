@@ -1,6 +1,8 @@
 # RingBuffer
 this is a RingBuffer Module for embed system
 
+Author: minnyatto@gmail.com
+
 how to use:
 	
 		1. Declare RingBuff, RingData like follow example
