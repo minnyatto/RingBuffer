@@ -1,5 +1,5 @@
 # RingBuffer
-this is a RingBuffer Module for embed system
+this is a RingBuffer Module for embedded system
 
 Author: minnyatto@gmail.com
 
