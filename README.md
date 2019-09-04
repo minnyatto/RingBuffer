@@ -34,14 +34,14 @@ Author: minnyatto@gmail.com
 				
 				
 				RingBuff_t 		myRingBuffer;
-				myRingData_t	myRingData[32];
+				myRingData_t		myRingData[32];
 				
 		2. Create RingBuffer
 		
 				RingBuffer_Create(&myRingBuffer, 
-									&myRingData[0], 
-									sizeof(myRingData[0]), 
-									sizeof(myRingData)/sizeof(myRingData[0]));
+						  &myRingData[0], 
+						  sizeof(myRingData[0]), 
+						  sizeof(myRingData)/sizeof(myRingData[0]));
 				
 		3. Use
 			
