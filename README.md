@@ -23,7 +23,9 @@ Author: minnyatto@gmail.com
 
 ****how to use:
 	
-		1. Declare RingBuff, RingData like follow example
+		how to use:
+	
+		1. Declare RingBuff, RingData, UserID like follow example
 				
 				typedef struct
 				{
@@ -34,22 +36,37 @@ Author: minnyatto@gmail.com
 				
 				
 				RingBuff_t 		myRingBuffer;
-				myRingData_t		myRingData[32];
+				myRingData_t	myRingData[32];
+				
+				int8_t		UserID1			
+				int8_t		UserID2
+				//ReadIdx of UserID1 and UserID2 is Different
 				
 		2. Create RingBuffer
 		
 				RingBuffer_Create(&myRingBuffer, 
-						  &myRingData[0], 
-						  sizeof(myRingData[0]), 
-						  sizeof(myRingData)/sizeof(myRingData[0]));
+								&myRingData[0], 
+								sizeof(myRingData[0]), 
+								sizeof(myRingData)/sizeof(myRingData[0]));
+		3. Add User
 				
-		3. Use
+				RingBuffer_AddUser(&myRingBuffer, &UserID1);
+				RingBuffer_AddUser(&myRingBuffer, &UserID2);
+				
+		4. Use
 			
-			myRingData_t itemData;
+			**********Read Data
+			myRingData_t itemData1;
+			myRingData_t itemData2;
+			ret1 = RingBuffer_Get(UserID1, &myRingBuffer, (void *)&itemData1);
+			ret2 = RingBuffer_Get(UserID2, &myRingBuffer, (void *)&itemData2);
 			
-			ret = RingBuffer_Get(&myRingBuffer, (void *)&itemData);
-			
-			ret = RingBuffer_Set(&myRingBuffer, (void *)&itemData);	
+			**********Write Data
+			* Write Process can not be from multi user, so this process dont need User ID
+			myRingData_t newitemData;
+			ret = RingBuffer_Set(&myRingBuffer, (void *)&newitemData);	
+
+
 			//When you want to know there is new data in RingBuffer or not but you dont
 			want to get the new data, use follow function and see the return value
 			
